@@ -4,6 +4,8 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/core';
 import theme from "ui/themes/theme";
+import Header from "ui/components/surfaces/Header/Header";
+import Footer from "ui/components/surfaces/Footer/Footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
 
@@ -18,7 +20,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         </title>
       </Head>
       <ThemeProvider theme={theme}>
+        <Header />
         <Component {...pageProps} />
+        <Footer />
       </ThemeProvider>
 
 
