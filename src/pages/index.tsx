@@ -1,8 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '@styles/Home.module.css'
-import { Button } from '@material-ui/core'
+import styles from '../ui/styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
@@ -14,14 +13,12 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <Button variant={'contained'}>Clique aqui</Button>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
+          Refatorando projeto de forma atualizada!!
         </p>
 
         <div className={styles.grid}>
