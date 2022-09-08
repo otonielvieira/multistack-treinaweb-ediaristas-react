@@ -1,7 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../ui/styles/Home.module.css'
+import styles from '@styles/Home.module.css'
+/* Meus imports a partir daqui */
+import { Button } from '@mui/material';
 
 const Home: NextPage = () => {
   return (
@@ -20,6 +22,7 @@ const Home: NextPage = () => {
         <p className={styles.description}>
           Refatorando projeto de forma atualizada!!
         </p>
+        <Button variant='contained'>Clique</Button>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
@@ -60,7 +63,7 @@ const Home: NextPage = () => {
         >
           Powered by{' '}
           <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            <img src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
