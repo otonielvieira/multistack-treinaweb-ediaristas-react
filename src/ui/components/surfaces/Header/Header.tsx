@@ -3,9 +3,11 @@ import Link from "ui/components/navigation/Link/Link";
 import { HeaderAppBar, HeaderLogo, ButtonContainer, HeaderDrawer } from "./Header.styled";
 import RoundedButton from 'ui/components/imputs/RoundedButton/RoundedButton';
 import { useState } from "react";
+import useIsMobile from "data/hooks/useIsMobile";
 
 const Header: React.FC = () => {
-    return <HeaderMobile />
+    const isMobile = useIsMobile()
+    return isMobile? <HeaderMobile />: <HeaderDesktop />;
 };
 
 export default Header;
@@ -46,15 +48,19 @@ const HeaderMobile: React.FC = () => {
     return (
         <HeaderAppBar>
             <Toolbar component={Container}>
-               <IconButton edge={"start"} color={"inherit"} onClick={()=>setDrawerOpen(true)}>
-                <i className="twf-bars" />
-               </IconButton>
+                <IconButton edge={"start"} color={"inherit"} onClick={() => setDrawerOpen(true)}>
+                    <i className="twf-bars" />
+                </IconButton>
 
                 <Link href="/">
                     <HeaderLogo src="/img/logos/logo.svg" alt="e-diarista" />
                 </Link>
 
-                <HeaderDrawer open={isDrawerOpen}>
+                <HeaderDrawer open={isDrawerOpen}
+                    onClose={() => setDrawerOpen(false)}
+                    onClick={()=>setDrawerOpen(false)}
+                >
+
                     <MenuList>
                         <Link href="/login" Component={MenuItem}>Login</Link>
                         <Divider />
