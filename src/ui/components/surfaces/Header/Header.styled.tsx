@@ -1,5 +1,6 @@
 import { styled } from "@mui/material/styles";
 import { AppBar, Drawer } from "@mui/material";
+import theme from "ui/themes/light-theme";
 
 
 export const HeaderAppBar = styled(AppBar)`
@@ -46,5 +47,14 @@ export const ButtonContainer = styled('div')`
 
 
 export const HeaderDrawer = styled(Drawer)`
-    
+    .MuiPaper-root{
+        ${({theme})=> theme.spacing()};
+        background-color: ${({theme}) =>theme.palette.primary.main};
+        color: ${({theme}) =>theme.palette.primary.contrastText};
+    }
+
+    .MuiDivider-root{
+        margin: ${({theme})=>theme.spacing(2)};
+        border-color: ${({theme})=> theme.palette.primary.light};
+    }
 `;
