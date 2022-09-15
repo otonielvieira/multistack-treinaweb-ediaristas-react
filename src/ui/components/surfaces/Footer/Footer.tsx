@@ -1,6 +1,15 @@
 import { Box, List, Typography } from "@mui/material";
 import Link from "ui/components/navigation/Link/Link";
-import { FooterContainer, FooterTitle, FooterGrid, FooterListItem } from "./Footer.style";
+import {
+    FooterContainer,
+    FooterTitle,
+    FooterGrid,
+    FooterListItem,
+    SocialContainer,
+    AppList,
+    FooterSocialList,
+    SocialButton
+} from "./Footer.style";
 
 const Footer = () => {
     return (
@@ -55,8 +64,57 @@ const Footer = () => {
                     </Typography>
                 </Box>
 
+                <SocialContainer>
+                    <div>
+                        <FooterTitle>Baixe nossos aplicativos</FooterTitle>
+                        <AppList>
+                            <li>
+                                <a href="https://apps.apple.com/br/app/treinaweb/id1322729447"
+                                    target={"-blank"}
+                                    rel={"noopener noreferrer"}
+                                >
+                                    <img src="/img/logos/app-store.png" alt={"AppStore"} />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://play.google.com/store/apps/details?id=br.com.treinaweb.mobile"
+                                    target={"-blank"}
+                                    rel={"noopener noreferrer"}
+                                >
+                                    <img src="/img/logos/google-play.png" alt={"Google Play"} />
+                                </a>
+                            </li>
 
-                <FooterTitle>Baixe nossos aplicativos</FooterTitle>
+                        </AppList>
+                    </div>
+
+                    <div>
+
+                        <FooterTitle>Redes Sociais</FooterTitle>
+                        <FooterTitle>
+                            <FooterSocialList>
+                                <FooterListItem>
+                                    <SocialButton href="/">
+                                        <i className="twf-facebook-f" />
+                                    </SocialButton>
+                                </FooterListItem>
+                                <FooterListItem>
+                                    <SocialButton href="/">
+                                        <i className="twf-instagram" />
+                                    </SocialButton>
+                                </FooterListItem>
+                                <FooterListItem>
+                                    <SocialButton href="/">
+                                        <i className="twf-youtube" />
+                                    </SocialButton>
+                                </FooterListItem>
+                            </FooterSocialList>
+                        </FooterTitle>
+                    </div>
+                </SocialContainer>
+
+
+
             </FooterGrid>
 
         </FooterContainer >
