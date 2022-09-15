@@ -29,7 +29,7 @@ const HeaderDesktop: React.FC = () => {
                         Seja um(a) diarista
                     </Link>
 
-                    <Link href="/login">
+                    <Link href="/login" Component={RoundedButton}>
                         Login
                     </Link>
                 </ButtonContainer>
