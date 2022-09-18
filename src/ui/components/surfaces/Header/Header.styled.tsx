@@ -1,9 +1,11 @@
 import { styled } from "@mui/material/styles";
-import { AppBar, Drawer } from "@mui/material";
+import { AppBar, AppBarProps, Drawer } from "@mui/material";
 import theme from "ui/themes/light-theme";
 
 
-export const HeaderAppBar = styled(AppBar)`
+export const HeaderAppBar = styled((props: AppBarProps) => {
+    <AppBar position="sticky" {...props} />
+})`
     &.MuiAppBar-root{
         background-color: ${({ theme }) => theme.palette.background.paper};
         box-shadow: 0px 5px 4px rgba(0,0,0, 0.05);
@@ -18,7 +20,7 @@ export const HeaderAppBar = styled(AppBar)`
     }
 
     ${({ theme }) => theme.breakpoints.up('md')}{
-         .MuiToolbar-root {
+         .MuiToolbar-root { 
         
         grid-template-columns: auto auto 1fr auto;
         gap: ${({ theme }) => theme.spacing(9)};
@@ -48,13 +50,13 @@ export const ButtonContainer = styled('div')`
 
 export const HeaderDrawer = styled(Drawer)`
     .MuiPaper-root{
-        ${({theme})=> theme.spacing()};
-        background-color: ${({theme}) =>theme.palette.primary.main};
-        color: ${({theme}) =>theme.palette.primary.contrastText};
+        ${({ theme }) => theme.spacing()};
+        background-color: ${({ theme }) => theme.palette.primary.main};
+        color: ${({ theme }) => theme.palette.primary.contrastText};
     }
 
     .MuiDivider-root{
-        margin: ${({theme})=>theme.spacing(2)};
-        border-color: ${({theme})=> theme.palette.primary.light};
+        margin: ${({ theme }) => theme.spacing(2)};
+        border-color: ${({ theme }) => theme.palette.primary.light};
     }
 `;

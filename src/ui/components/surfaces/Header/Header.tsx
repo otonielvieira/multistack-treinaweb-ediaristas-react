@@ -7,7 +7,7 @@ import useIsMobile from "data/hooks/useIsMobile";
 
 const Header: React.FC = () => {
     const isMobile = useIsMobile()
-    return isMobile? <HeaderMobile />: <HeaderDesktop />;
+    return isMobile ? <HeaderMobile /> : <HeaderDesktop />;
 };
 
 export default Header;
@@ -58,7 +58,7 @@ const HeaderMobile: React.FC = () => {
 
                 <HeaderDrawer open={isDrawerOpen}
                     onClose={() => setDrawerOpen(false)}
-                    onClick={()=>setDrawerOpen(false)}
+                    onClick={() => setDrawerOpen(false)}
                 >
 
                     <MenuList>
