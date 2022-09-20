@@ -4,7 +4,7 @@ import theme from "ui/themes/light-theme";
 
 
 export const HeaderAppBar = styled((props: AppBarProps) => {
-    <AppBar position="sticky" {...props} />
+    return <AppBar position="sticky" {...props} />
 })`
     &.MuiAppBar-root{
         background-color: ${({ theme }) => theme.palette.background.paper};
