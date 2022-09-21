@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 import { PropsWithChildren } from "react";
 import Link, { LinkProps } from "ui/components/navigation/Link/Link";
 import theme from "ui/themes/light-theme";
-import RoundedButton  from "ui/components/imputs/RoundedButton/RoundedButton";
+import RoundedButton from "ui/components/imputs/RoundedButton/RoundedButton";
 
 export const SectionContainer = styled('section')`
     min-height: 250px;
@@ -117,7 +117,50 @@ export const SectionButton = styled((props: PropsWithChildren<LinkProps>) => (
 
     grid-area: button;
     width: 405px;
-    height: 90%;
+    height: 100%;
+
+`;
+
+
+export const SectionPictureContainer = styled('div')`
+    grid-area: picture;
+    position: relative;
+
+    img{
+        position: relative;
+        top: 35px;
+        width: 100%;
+    }
+
+    ${({ theme }) => theme.breakpoints.down("md")}{
+        display: none;
+    }
+
+    &::before,
+    &::after{
+        content: "";
+        position: absolute;
+        border-radius: 100%;
+    }
+
+
+    &::before{
+       top: 20%;
+       right: -5%;
+       width: 130px;
+       height: 130px;
+       background-color: ${({ theme }) => theme.palette.primary.main};
+       z-index: 2;
+    }
+    &::after{
+       bottom: 0;
+       right: 0;
+       width: 40px;
+       height: 40px;
+       background-color: ${({ theme }) => theme.palette.grey[200]};
+       z-index: 2;
+    }
+   
 
 `;
 
