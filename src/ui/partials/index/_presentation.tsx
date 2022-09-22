@@ -5,7 +5,8 @@ import {
     SectionTitle,
     SectionSubtitle,
     SectionButton,
-    SectionPictureContainer
+    SectionPictureContainer,
+    BottomButton
 } from "./_presentation.stlyled";
 
 
@@ -38,13 +39,16 @@ const Presentation = () => {
                 Encontre um(a) diarista
             </SectionButton>
 
-
             <SectionPictureContainer>
                 <img src={cleanerPicture} alt="imagem diarista" />
             </SectionPictureContainer>
 
-
         </ContainerStyled>
+
+        <BottomButton>
+            <i  className="twf-caret-down"/>
+        </BottomButton>
+
     </SectionContainer>;
 }
 

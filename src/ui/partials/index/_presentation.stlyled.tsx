@@ -6,6 +6,7 @@ import theme from "ui/themes/light-theme";
 import RoundedButton from "ui/components/imputs/RoundedButton/RoundedButton";
 
 export const SectionContainer = styled('section')`
+position: relative;
     min-height: 250px;
     background-image: url("/img/home/living-room.svg");
     background-repeat: no-repeat;
@@ -165,3 +166,19 @@ export const SectionPictureContainer = styled('div')`
 `;
 
 
+export const BottomButton = styled("span")`
+    position: absolute;
+    bottom:0;
+    right:50%;
+    transform: translate(-50%, 50%);
+    background-color: ${({theme})=>theme.palette.secondary.main};
+    padding: 11px 12px;
+    border-radius: 50px;
+    color: ${({theme})=>theme.palette.common.white};
+    border: 5px solid currentColor;
+
+    i{
+        position: relative;
+        left: -2px;
+    }
+`;
