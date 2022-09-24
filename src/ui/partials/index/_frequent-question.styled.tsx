@@ -1,3 +1,4 @@
+import { Accordion } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 
@@ -35,7 +36,38 @@ export const SectionSubtitle = styled('p')`
     height: 6px;
     left: 50%;
     transform: translate(-50%);
-    bottom: ${({theme})=>theme.spacing(-5)};
-    background-color: ${({theme})=>theme.palette.grey["300"]};
+    bottom: ${({ theme }) => theme.spacing(-5)};
+    background-color: ${({ theme }) => theme.palette.grey["300"]};
    }
+`;
+
+export const AccordionStyled = styled(Accordion)`
+   .MuiAccordionSummary-content .MuiTypography-root{
+        font-weight: bold;
+
+   } 
+
+   &.MuiAccordion-root{
+    box-shadow: none;
+    border: 2px solid ${({ theme }) => theme.palette.primary.main};
+
+    &::before{
+       background-color : transparent;
+       
+       &,
+       &.Mui-expanded{
+        margin: -2px 0 0;
+       }
+    }
+
+    .MuiAccordionDetails-root{
+       padding-right : ${({theme})=>theme.spacing(7)};
+    }
+
+    .MuiAccordionSummary-expandIconWrapper{
+       color: ${({theme})=>theme.palette.text.secondary}; 
+    }
+
+   }
+
 `;
