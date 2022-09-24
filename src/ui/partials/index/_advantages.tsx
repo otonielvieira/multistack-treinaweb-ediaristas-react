@@ -61,11 +61,7 @@ const Advantages = () => {
                             </ListItem>
                             </ React.Fragment>
                         );
-                    })};
-
-
-
-
+                    })}
 
                 </ListStyle>
 
