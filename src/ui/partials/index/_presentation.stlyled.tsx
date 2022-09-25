@@ -117,8 +117,14 @@ export const SectionButton = styled((props: PropsWithChildren<LinkProps>) => (
 ))`
 
     grid-area: button;
-    width: 405px;
+    width: 100%;
     height: 100%;
+
+    ${({ theme }) => theme.breakpoints.up('md')}{
+        width: 405px;
+        height: 100%;
+
+    }
 
 `;
 
