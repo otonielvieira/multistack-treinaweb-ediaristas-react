@@ -5,7 +5,7 @@ import RoundedButton from "./RoundedButton";
 
 
 export default {
-    title: 'imputs/RoudedButton',
+    title: 'inputs/RoudedButton',
     component: RoundedButton,
 } as ComponentMeta<typeof RoundedButton>;
 

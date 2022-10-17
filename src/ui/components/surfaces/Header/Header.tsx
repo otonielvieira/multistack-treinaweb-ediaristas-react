@@ -1,7 +1,7 @@
 import { AppBar, Container, Divider, MenuList, Toolbar, MenuItem, IconButton } from "@mui/material";
 import Link from "ui/components/navigation/Link/Link";
 import { HeaderAppBar, HeaderLogo, ButtonContainer, HeaderDrawer } from "./Header.styled";
-import RoundedButton from 'ui/components/imputs/RoundedButton/RoundedButton';
+import RoundedButton from 'ui/components/inputs/RoundedButton/RoundedButton';
 import { useState } from "react";
 import useIsMobile from "data/hooks/useIsMobile";
 

@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 import { PropsWithChildren } from "react";
 import Link, { LinkProps } from "ui/components/navigation/Link/Link";
 import theme from "ui/themes/light-theme";
-import RoundedButton from "ui/components/imputs/RoundedButton/RoundedButton";
+import RoundedButton from "ui/components/inputs/RoundedButton/RoundedButton";
 
 export const SectionContainer = styled('section')`
 position: relative;
