@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material";
+import { createTheme, Paper } from "@mui/material";
 import { mainModule } from "process";
 const theme = createTheme({
     palette: {
@@ -72,6 +72,15 @@ const theme = createTheme({
                 },
             }],
         },
+
+    MuiPaper:{
+        styleOverrides:{
+            root:{
+                boxShadow: '0px 0px 39px rgba(0,0,0, 0.05)',
+            },
+        },
+    },
+
     },
 
 });

@@ -18,7 +18,7 @@ const TextFieldMask:React.FC<PropsWithChildren<TextFieldMaskProps>> = ({
     ...props
 })=>{
     return(
-    <InputMask mask={'99/99/9999'} value={value} onChange={onChange} onBlur={onBlur} >
+    <InputMask mask={'99/999/999'} value={value} onChange={onChange} onBlur={onBlur} >
         {()=> <TextField {...props} variant={"outlined"} />}
         </InputMask>
     );

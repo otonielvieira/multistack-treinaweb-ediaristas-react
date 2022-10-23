@@ -18,7 +18,7 @@ const HeaderDesktop: React.FC = () => {
         <HeaderAppBar>
             <Toolbar component={Container}>
                 <Link href="/">
-                    <HeaderLogo src="/img/logos/logo1.svg" alt="e-diarista" />
+                    <HeaderLogo src="/img/logos/logo.svg" alt="e-diarista" />
                 </Link>
 
                 <div>&nbsp;</div>
